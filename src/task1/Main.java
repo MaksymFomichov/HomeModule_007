@@ -1,21 +1,49 @@
-package task1.interf;
+package task1;
 
-import task1.interf.mp3players.Player1;
-import task1.interf.mp3players.Player2;
-import task1.interf.mp3players.Player3;
-import task1.interf.mp3players.Player4;
-import task1.interf.mp3players.Player5;
-import task1.interf.mp3players.Player6;
+import task1.mp3players.*;
 
 public class Main {
 
     public static void main(String[] args) {
-//        Player1 player1 = new Player1(1);
-//        Player2 player2 = new Player2(10);
-//        Player3 player3 = new Player3(100);
-//        Player4 player4 = new Player4(1000);
-//        Player5 player5 = new Player5(10000);
-//        Player6 player6 = new Player6(100000);
-//        player1.playSong();
+        Player1 player1 = new Player1(1);
+        Player2 player2 = new Player2(10);
+        Player3 player3 = new Player3(100);
+        Player4 player4 = new Player4(1000);
+        Player5 player5 = new Player5(10000);
+        Player6 player6 = new Player6(100000);
+
+        String song1 = "Пачка сигарет";
+        String[] playlist = {"Кончится лето", "Красно-жёлтые дни", "Нам с тобой", "Звезда", "Кукушка", "Когда Твоя Девушка Больна", "Муравейник", "Следи за собой"};
+
+        System.out.println("player 1");
+        player1.song = song1;
+        player1.playSong();
+        System.out.println("------------------");
+        System.out.println("player 2");
+        player2.song = song1;
+        player2.playSong();
+        System.out.println("------------------");
+        System.out.println("player 3");
+        player3.songs = playlist;
+        player3.playSong();
+        player3.playAllSongs();
+        System.out.println("------------------");
+        System.out.println("player 4");
+        player4.songs = playlist;
+        player4.playSong();
+        player4.playAllSongs();
+        System.out.println("------------------");
+        System.out.println("player 5");
+        player5.songs = playlist;
+        player5.playSong();
+        player5.playAllSongs();
+        System.out.println("------------------");
+        System.out.println("player 6");
+        player6.songs = playlist;
+        player6.playSong();
+        player6.playAllSongs();
+        System.out.println("------------------");
+        player6.shuffle();
+        System.out.println("------------------");
     }
 }
